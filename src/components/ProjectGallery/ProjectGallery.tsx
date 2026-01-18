@@ -1,7 +1,10 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { useScrollSync } from '../../hooks/useScrollSync';
-import { mockApi, type Project, FALLBACK_IMAGE_URL } from '../../utils/mockApi';
+import { type Project } from '../../interfaces/Project';
+import projectsData from '../../data/projects';
 import styles from './ProjectGallery.module.css';
+
+const FALLBACK_IMAGE_URL = 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&h=600&fit=crop';
 
 interface ProjectGalleryProps {
   projects?: Project[];
@@ -45,8 +48,7 @@ const ProjectImage: React.FC<{ project: Project }> = ({ project }) => {
 const ProjectGallery: React.FC<ProjectGalleryProps> = ({ projects: propProjects }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { addElement } = useScrollSync({ enabled: true, throttleMs: 16 });
-  const [projects, setProjects] = useState<Project[]>(propProjects || []);
-  const [loading, setLoading] = useState(!propProjects);
+  const projects = propProjects || projectsData;
 
   // Split projects into 3 rows for horizontal scrolling
   const row1Projects = projects.filter((_, index) => index % 3 === 0);
@@ -58,24 +60,6 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ projects: propProjects 
       addElement(containerRef.current);
     }
   }, [addElement]);
-
-  useEffect(() => {
-    if (!propProjects) {
-      const loadProjects = async () => {
-        try {
-          setLoading(true);
-          const fetchedProjects = await mockApi.getProjects();
-          setProjects(fetchedProjects);
-        } catch (error) {
-          console.error('Failed to load projects:', error);
-        } finally {
-          setLoading(false);
-        }
-      };
-
-      loadProjects();
-    }
-  }, [propProjects]);
 
   // Auto-scroll effect
   useEffect(() => {
@@ -108,20 +92,6 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ projects: propProjects 
       scrollIntervals.forEach(interval => window.clearInterval(interval));
     };
   }, [projects]);
-
-  if (loading) {
-    return (
-      <section className={styles.gallery}>
-        <div className={styles.container}>
-          <h2 className={styles.title}>My Work</h2>
-          <div className={styles.loadingContainer}>
-            <div className={styles.loadingSpinner}></div>
-            <p className={styles.loadingText}>Loading projects...</p>
-          </div>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <section className={styles.gallery}>

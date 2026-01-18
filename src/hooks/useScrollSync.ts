@@ -84,7 +84,6 @@ export const useScrollSync = (options: ScrollSyncOptions = {}) => {
 
   return {
     addElement,
-    removeElement,
-    elements: elementsRef.current
+    removeElement
   };
 };
