@@ -29,49 +29,23 @@
   line-height: 1.6;
 }
 
-.categoryTabs {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
+/* Category tabs removed */
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 20px 0;
 }
 
-.categoryTab {
-  background: var(--secondary-black);
-  border: 2px solid var(--accent-black);
-  color: var(--text-grey);
-  padding: 12px 24px;
-  border-radius: 25px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+@media (max-width: 768px) {
+  .projectGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
-.categoryTab:hover {
-  border-color: var(--primary-gold);
-  color: var(--primary-gold);
-  background: rgba(255, 215, 0, 0.1);
-}
 
-.categoryTab.active {
-  background: var(--primary-gold);
-  border-color: var(--primary-gold);
-  color: var(--primary-black);
-}
-
-.count {
-  font-size: 12px;
-  opacity: 0.7;
-}
-
-.carouselSection {
-  margin: 0 -20px;
-  padding: 0 20px;
-}
 
 @media (max-width: 768px) {
   .portfolio {
@@ -82,17 +56,5 @@
     font-size: 36px;
   }
   
-  .categoryTabs {
-    gap: 8px;
-  }
-  
-  .categoryTab {
-    padding: 10px 16px;
-    font-size: 14px;
-  }
-  
-  .carouselSection {
-    margin: 0 -10px;
-    padding: 0 10px;
-  }
+
 }

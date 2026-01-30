@@ -111,10 +111,7 @@ export const projectsData: Project[] = [
   }
 ];
 
-export const getProjectsByCategory = (category: Project['category']): Project[] => {
-  return projectsData.filter(project => project.category === category);
-};
-
+// function removed as we are showing all projects
 export const getAllProjects = (): Project[] => {
   return projectsData;
 };

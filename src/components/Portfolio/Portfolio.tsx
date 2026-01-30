@@ -1,21 +1,13 @@
 import React, { useState } from 'react';
 import type { Project } from '../../utils/projectData';
-import { getProjectsByCategory } from '../../utils/projectData';
-import ProjectCarousel from '../ProjectCarousel/ProjectCarousel';
+import { getAllProjects } from '../../utils/projectData';
+import ProjectCard from '../ProjectCard/ProjectCard';
 import ProjectModal from '../ProjectModal/ProjectModal';
 import styles from './Portfolio.module.css';
 
 const Portfolio: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [activeCategory, setActiveCategory] = useState<'logos' | 'flyers' | 'banners'>('logos');
-
-  const categories = [
-    { key: 'logos' as const, label: 'Logos', count: getProjectsByCategory('logos').length },
-    { key: 'flyers' as const, label: 'Flyers', count: getProjectsByCategory('flyers').length },
-    { key: 'banners' as const, label: 'Banners', count: getProjectsByCategory('banners').length }
-  ];
-
-  const currentProjects = getProjectsByCategory(activeCategory);
+  const projects = getAllProjects();
 
   const handleProjectClick = (project: Project) => {
     setSelectedProject(project);
@@ -29,32 +21,20 @@ const Portfolio: React.FC = () => {
     <div id="portfolio" className={styles.portfolio}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>My Portfolio</h2>
+          <h2 className={styles.title}>Selected Works</h2>
           <p className={styles.subtitle}>
-            Explore my creative work across different design categories
+            A curated collection of branding, print, and digital design.
           </p>
         </div>
 
-        <div className={styles.categoryTabs}>
-          {categories.map((category) => (
-            <button
-              key={category.key}
-              className={`${styles.categoryTab} ${
-                activeCategory === category.key ? styles.active : ''
-              }`}
-              onClick={() => setActiveCategory(category.key)}
-            >
-              {category.label}
-              <span className={styles.count}>({category.count})</span>
-            </button>
+        <div className={styles.projectGrid}>
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              onClick={() => handleProjectClick(project)}
+            />
           ))}
-        </div>
-
-        <div className={styles.carouselSection}>
-          <ProjectCarousel
-            projects={currentProjects}
-            onProjectClick={handleProjectClick}
-          />
         </div>
       </div>
 

@@ -17,7 +17,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
         </div>
       </div>
       <div className={styles.content}>
-        <span className={styles.category}>{project.category}</span>
+
         <h3 className={styles.title}>{project.title}</h3>
         <p className={styles.shortDescription}>{project.shortDescription}</p>
       </div>

@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
           const nextSection = arr[index + 1];
           const sectionTop = section.offsetTop - 150; // Offset for navbar height
           const sectionBottom = nextSection ? nextSection.offsetTop - 150 : document.body.scrollHeight;
-          
+
           return scrollTop >= sectionTop && scrollTop < sectionBottom;
         });
 
@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
 
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Call once to set initial state
-    
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -65,20 +65,20 @@ const Navbar: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.logo}>
           {/* Mobile Menu Toggle */}
-        <button 
-          className={styles.menuToggle}
-          onClick={toggleMobileMenu}
-          aria-label="Toggle mobile menu"
-        >
-          <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
-        </button>
-          <span className={styles.logoText}>BLEXGRAPHIX</span>
+          <button
+            className={styles.menuToggle}
+            onClick={toggleMobileMenu}
+            aria-label="Toggle mobile menu"
+          >
+            <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
+          </button>
+          <img src="/logo.png" alt="BGH Logo" className={styles.logoImage} />
         </div>
-        
+
         {/* Desktop Navigation */}
         <ul className={`${styles.navLinks} ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
           <li>
-            <button 
+            <button
               onClick={() => scrollToSection('hero')}
               className={`${styles.navLink} ${activeSection === 'hero' ? styles.active : ''}`}
             >
@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
             </button>
           </li>
           <li>
-            <button 
+            <button
               onClick={() => scrollToSection('about')}
               className={`${styles.navLink} ${activeSection === 'about' ? styles.active : ''}`}
             >
@@ -94,7 +94,7 @@ const Navbar: React.FC = () => {
             </button>
           </li>
           <li>
-            <button 
+            <button
               onClick={() => scrollToSection('portfolio')}
               className={`${styles.navLink} ${activeSection === 'portfolio' ? styles.active : ''}`}
             >
@@ -102,7 +102,7 @@ const Navbar: React.FC = () => {
             </button>
           </li>
           <li>
-            <button 
+            <button
               onClick={() => scrollToSection('contact')}
               className={`${styles.navLink} ${activeSection === 'contact' ? styles.active : ''}`}
             >
@@ -112,14 +112,14 @@ const Navbar: React.FC = () => {
         </ul>
 
         {/* Download CV Button */}
-        <button 
+        <button
           onClick={handleDownloadCV}
           className={`${styles.downloadButton} ${isMobileMenuOpen ? styles.hideOnMobile : ''}`}
           aria-label="Download CV"
         >
           <svg className={styles.downloadIcon} viewBox="0 0 24 24" fill="currentColor">
-            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-            <path d="M12,11L16,15H13V19H11V15H8L12,11Z"/>
+            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+            <path d="M12,11L16,15H13V19H11V15H8L12,11Z" />
           </svg>
           <span className={styles.downloadText}>Download CV</span>
         </button>

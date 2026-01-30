@@ -1,6 +1,6 @@
 :root {
   /* Color Palette */
-  --primary-gold: #FFD700;
+  --primary-gold: #D4AF37;
   --gold-hover: #FFC700;
   --gold-light: rgba(255, 215, 0, 0.1);
   --primary-black: #0A0A0A;
@@ -9,11 +9,11 @@
   --text-white: #FFFFFF;
   --text-grey: #B0B0B0;
   --text-dark-grey: #808080;
-  
+
   /* Typography */
   --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
   --font-secondary: 'Playfair Display', serif;
-  
+
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -21,12 +21,12 @@
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
   --spacing-2xl: 4rem;
-  
+
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-medium: 0.3s ease;
   --transition-slow: 0.5s ease;
-  
+
   /* Shadows */
   --shadow-subtle: 0 2px 4px rgba(0, 0, 0, 0.1);
   --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -70,7 +70,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   font-weight: 700;
   line-height: 1.2;
@@ -174,15 +179,15 @@ button:focus-visible {
   h1 {
     font-size: 2.5rem;
   }
-  
+
   h2 {
     font-size: 2rem;
   }
-  
+
   h3 {
     font-size: 1.75rem;
   }
-  
+
   .container {
     padding: 0 var(--spacing-sm);
   }

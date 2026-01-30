@@ -23,7 +23,7 @@
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
   border: 1px solid rgba(255, 215, 0, 0.2);
-  box-shadow: 
+  box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.4),
     0 0 0 1px rgba(255, 255, 255, 0.05),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -194,6 +194,7 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+
   /* Make navbar fixed on tablet format */
   .navbar {
     position: fixed;
@@ -205,7 +206,7 @@
     -webkit-backdrop-filter: blur(25px);
     border-bottom: 1px solid rgba(255, 215, 0, 0.2);
   }
-  
+
   .navbar.scrolled {
     top: 0;
     left: 0;
@@ -215,20 +216,20 @@
     border-radius: 0;
     background-color: rgba(10, 10, 10, 0.98);
   }
-  
+
   .container {
     padding: 0 1.5rem;
   }
-  
+
   .scrolled .container {
     padding: 0 1.5rem;
     max-width: 1200px;
   }
-  
+
   .navLinks {
     gap: 1.5rem;
   }
-  
+
   .scrolled .navLinks {
     gap: 1rem;
   }
@@ -238,34 +239,34 @@
   .navbar {
     padding: 0.75rem 0;
   }
-  
+
   .navbar.scrolled {
     width: 95%;
     padding: 0.5rem 0;
   }
-  
+
   .container {
     padding: 0 1rem;
     position: relative;
   }
-  
+
   .scrolled .container {
     padding: 0 0.75rem;
   }
-  
+
   .logoText {
     font-size: 1.2rem;
   }
-  
+
   .scrolled .logoText {
     font-size: 1rem;
   }
-  
+
   /* Show mobile menu toggle */
   .menuToggle {
     display: flex;
   }
-  
+
   /* Hide navigation links by default on mobile */
   .navLinks {
     position: absolute;
@@ -286,14 +287,14 @@
     transition: all 0.3s ease;
     z-index: 5;
   }
-  
+
   /* Show mobile menu when open */
   .navLinks.mobileMenuOpen {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
   }
-  
+
   .navLink {
     font-size: 1rem;
     padding: 1rem 2rem;
@@ -301,7 +302,7 @@
     width: 100%;
     text-align: left;
   }
-  
+
   .scrolled .navLink {
     font-size: 1rem;
     padding: 1rem 2rem;
@@ -329,7 +330,7 @@
     width: 12px;
     height: 12px;
   }
-  
+
   /* Hide download button when mobile menu is open */
   .hideOnMobile {
     opacity: 0;
@@ -342,36 +343,36 @@
     width: 98%;
     top: 0.5rem;
   }
-  
+
   .container {
     padding: 0 0.75rem;
   }
-  
+
   .scrolled .container {
     padding: 0 0.5rem;
   }
-  
+
   .logoText {
     font-size: 1.1rem;
   }
-  
+
   .scrolled .logoText {
     font-size: 0.9rem;
   }
-  
+
   .navLinks {
     gap: 0.5rem;
   }
-  
+
   .scrolled .navLinks {
     gap: 0.25rem;
   }
-  
+
   .navLink {
     font-size: 0.8rem;
     padding: 0.35rem 0.5rem;
   }
-  
+
   .scrolled .navLink {
     font-size: 0.7rem;
     padding: 0.25rem 0.3rem;
@@ -401,42 +402,42 @@
   .navbar {
     padding: 0.5rem 0;
   }
-  
+
   .navbar.scrolled {
     width: 98%;
     top: 0.25rem;
     padding: 0.4rem 0;
   }
-  
+
   .container {
     padding: 0 0.5rem;
   }
-  
+
   .scrolled .container {
     padding: 0 0.4rem;
   }
-  
+
   .logoText {
     font-size: 1rem;
   }
-  
+
   .scrolled .logoText {
     font-size: 0.85rem;
   }
-  
+
   .navLinks {
     gap: 0.25rem;
   }
-  
+
   .scrolled .navLinks {
     gap: 0.15rem;
   }
-  
+
   .navLink {
     font-size: 0.75rem;
     padding: 0.3rem 0.4rem;
   }
-  
+
   .scrolled .navLink {
     font-size: 0.65rem;
     padding: 0.2rem 0.25rem;
@@ -467,32 +468,32 @@
   .container {
     padding: 0 0.25rem;
   }
-  
+
   .scrolled .container {
     padding: 0 0.25rem;
   }
-  
+
   .logoText {
     font-size: 0.9rem;
   }
-  
+
   .scrolled .logoText {
     font-size: 0.8rem;
   }
-  
+
   .navLinks {
     gap: 0.15rem;
   }
-  
+
   .scrolled .navLinks {
     gap: 0.1rem;
   }
-  
+
   .navLink {
     font-size: 0.7rem;
     padding: 0.25rem 0.3rem;
   }
-  
+
   .scrolled .navLink {
     font-size: 0.6rem;
     padding: 0.15rem 0.2rem;
@@ -516,4 +517,17 @@
     width: 6px;
     height: 6px;
   }
+}
+
+.logoImage {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.logoImage:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.6));
 }

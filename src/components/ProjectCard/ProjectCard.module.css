@@ -7,13 +7,13 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   min-width: 280px;
   flex-shrink: 0;
-  border: 1px solid var(--accent-black);
+  border: none;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(255, 215, 0, 0.2);
-  border-color: var(--primary-gold);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
 }
 
 .imageContainer {
@@ -40,7 +40,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,25 +64,15 @@
   padding: 20px;
 }
 
-.category {
-  display: inline-block;
-  background: rgba(255, 215, 0, 0.1);
-  color: var(--primary-gold);
-  padding: 4px 8px;
-  border-radius: 12px;
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 10px;
-  border: 1px solid rgba(255, 215, 0, 0.3);
-}
+/* Category styles removed */
 
 .title {
   font-size: 18px;
   font-weight: 700;
   color: var(--text-white);
   margin: 0 0 8px 0;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
   line-height: 1.3;
 }
 
