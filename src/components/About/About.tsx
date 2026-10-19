@@ -1,28 +1,29 @@
 import React from 'react';
 import styles from './About.module.css';
 
-const About: React.FC = () => {
-  return (
-    <section id="about" className={styles.about}>
-      <div className={styles.container}>
-        <h2 className={styles.title}>About</h2>
-        <div className={styles.content}>
-          <p className={styles.description}>
-            I’m <span className={styles.goldText}>Ediodiong Emmanuel</span>, a graphic designer who focuses on clarity, structure, and purpose. I approach design as a problem to be solved—understanding what needs to be communicated first, then deciding how it should look.
-         </p>
-         <p className={styles.description}>
-My work covers logos, flyers, social media visuals, and promotional materials, with a strong emphasis on layout, hierarchy, and readability. I care about how people interact with a design, what they notice first, and whether the message comes through without explanation.
-         </p>
-         <p className={styles.description}>
-I don’t design to decorate. I design to organize information, guide attention, and support the goal of the project. That mindset shapes every decision I make, from typography and spacing to color and composition.
-        </p>
-         <p className={styles.description}>
-I’m continually refining my process and standards, aiming for work that feels deliberate, confident, and reliable—design that holds up because it’s well thought through.
-          </p>
-        </div>
+const About: React.FC = () => (
+  <section id="about" className={styles.about}>
+    <div className={styles.container}>
+      <div className={styles.heading}>
+        <p className={styles.eyebrow}>A little about me</p>
+        <h2 className={styles.title}>Good design makes<br /><span>the message matter.</span></h2>
       </div>
-    </section>
-  );
-};
+      <div className={styles.content}>
+        <p className={styles.description}>
+          I’m <span className={styles.goldText}>Ediodiong Emmanuel</span>, a graphic designer who believes the best visuals do more than look good — they make ideas clear, memorable, and easy to connect with.
+        </p>
+        <p className={styles.description}>
+          From logo design and brand identity to flyers, social media, and promotional materials, I build thoughtful visual systems with strong hierarchy, purposeful typography, and a clear point of view.
+        </p>
+        <a className={styles.workLink} href="#portfolio">See selected work <span aria-hidden="true">↗</span></a>
+      </div>
+      <div className={styles.services} aria-label="Design services">
+        <span>01 / Brand identity</span>
+        <span>02 / Print &amp; campaigns</span>
+        <span>03 / Digital design</span>
+      </div>
+    </div>
+  </section>
+);
 
 export default About;

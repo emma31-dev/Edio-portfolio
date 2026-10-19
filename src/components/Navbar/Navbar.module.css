@@ -1,533 +1,150 @@
 .navbar {
-  position: fixed;
+  position: sticky;
+  z-index: 20;
   top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background-color: rgba(10, 10, 10, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 215, 0, 0.1);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 1rem 0;
-}
-
-.navbar.scrolled {
-  top: 1rem;
-  left: 50%;
-  right: auto;
-  transform: translateX(-50%);
-  width: 90%;
-  border-radius: 50px;
-  background-color: rgba(10, 10, 10, 0.8);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 215, 0, 0.2);
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    0 0 0 1px rgba(255, 255, 255, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  padding: 0.75rem 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(23, 23, 23, 0.08);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
   display: flex;
+  width: min(1440px, 100%);
+  min-height: 72px;
   align-items: center;
   justify-content: space-between;
-  transition: all 0.4s ease;
-}
-
-.scrolled .container {
-  padding: 0 1.5rem;
-  max-width: none;
+  gap: 32px;
+  margin: 0 auto;
+  padding: 0 4vw;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
+  display: inline-flex;
+  align-items: baseline;
+  color: var(--ink);
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -0.09em;
+  line-height: 1;
 }
 
-.logoText {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-left: 4px;
-  color: var(--primary-gold);
-  letter-spacing: 0.05em;
-  transition: all 0.3s ease;
-}
-
-.scrolled .logoText {
-  font-size: 1.25rem;
+.logoDot {
+  color: var(--gold);
 }
 
 .navLinks {
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 2rem;
-  transition: all 0.3s ease;
-}
-
-.scrolled .navLinks {
-  gap: 1.5rem;
-}
-
-.navLink {
-  background: none;
-  border: none;
-  color: var(--text-white);
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-  position: relative;
-  letter-spacing: 0.02em;
-}
-
-.navLink:hover {
-  color: var(--primary-gold);
-  background-color: rgba(255, 215, 0, 0.1);
-  transform: translateY(-2px);
-}
-
-.navLink:focus {
-  outline: 2px solid var(--primary-gold);
-  outline-offset: 2px;
-}
-
-.navLink.active {
-  color: var(--primary-gold);
-}
-
-.scrolled .navLink {
-  font-size: 0.9rem;
-  padding: 0.4rem 0.8rem;
-}
-
-.downloadButton {
-  display: flex;
   align-items: center;
-  gap: 0.5rem;
-  background-color: var(--primary-gold);
-  color: var(--primary-black);
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+  gap: clamp(24px, 4vw, 58px);
+  margin: 0 0 0 auto;
+  padding: 0;
+  list-style: none;
 }
 
-.downloadButton:hover {
-  background-color: var(--gold-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+.navLinks a {
+  color: #4e4e4e;
+  font-size: 0.85rem;
+  transition: color 160ms ease;
 }
 
-.downloadButton:focus {
-  outline: 2px solid var(--primary-gold);
-  outline-offset: 2px;
+.navLinks a:hover {
+  color: var(--gold);
 }
 
-.downloadIcon {
-  width: 18px;
-  height: 18px;
-  transition: transform 0.3s ease;
-}
-
-.downloadButton:hover .downloadIcon {
-  transform: translateY(2px);
-}
-
-.downloadText {
-  transition: all 0.3s ease;
-}
-
-.scrolled .downloadButton {
-  padding: 0.5rem 1rem;
+.contactButton {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  gap: 12px;
+  padding: 0 17px;
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+  background: var(--ink);
+  color: var(--paper);
   font-size: 0.8rem;
+  transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
 }
 
-.scrolled .downloadIcon {
-  width: 16px;
-  height: 16px;
+.contactButton:hover {
+  border-color: var(--gold);
+  background: var(--gold);
+  color: var(--ink);
 }
 
-.scrolled .downloadText {
-  display: none;
-}
-
-/* Mobile Menu Toggle */
 .menuToggle {
   display: none;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-  z-index: 10;
-  color: var(--primary-gold);
-  font-size: 1.5rem;
-  transition: all 0.3s ease;
-}
-
-.menuToggle:hover {
-  color: var(--gold-hover);
-  transform: scale(1.1);
-}
-
-.menuToggle i {
-  transition: all 0.3s ease;
-}
-
-.hideOnMobile {
-  transition: opacity 0.3s ease;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-
-  /* Make navbar fixed on tablet format */
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
-    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-  }
-
-  .navbar.scrolled {
-    top: 0;
-    left: 0;
-    right: 0;
-    transform: none;
-    width: 100%;
-    border-radius: 0;
-    background-color: rgba(10, 10, 10, 0.98);
-  }
-
-  .container {
-    padding: 0 1.5rem;
-  }
-
-  .scrolled .container {
-    padding: 0 1.5rem;
-    max-width: 1200px;
-  }
-
-  .navLinks {
-    gap: 1.5rem;
-  }
-
-  .scrolled .navLinks {
-    gap: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    padding: 0.75rem 0;
-  }
-
-  .navbar.scrolled {
-    width: 95%;
-    padding: 0.5rem 0;
-  }
-
-  .container {
-    padding: 0 1rem;
-    position: relative;
-  }
-
-  .scrolled .container {
-    padding: 0 0.75rem;
-  }
-
-  .logoText {
-    font-size: 1.2rem;
-  }
-
-  .scrolled .logoText {
-    font-size: 1rem;
-  }
-
-  /* Show mobile menu toggle */
-  .menuToggle {
-    display: flex;
-  }
-
-  /* Hide navigation links by default on mobile */
-  .navLinks {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-radius: 0 0 20px 20px;
-    border-top: 1px solid rgba(255, 215, 0, 0.2);
-    flex-direction: column;
-    gap: 0;
-    padding: 1rem 0;
-    transform: translateY(-100%);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 5;
-  }
-
-  /* Show mobile menu when open */
-  .navLinks.mobileMenuOpen {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .navLink {
-    font-size: 1rem;
-    padding: 1rem 2rem;
-    border-radius: 0;
-    width: 100%;
-    text-align: left;
-  }
-
-  .scrolled .navLink {
-    font-size: 1rem;
-    padding: 1rem 2rem;
-  }
-
-  .downloadButton {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.75rem;
-  }
-
-  .downloadIcon {
-    width: 14px;
-    height: 14px;
-  }
-
-  .downloadText {
-    display: none;
-  }
-
-  .scrolled .downloadButton {
-    padding: 0.4rem 0.5rem;
-  }
-
-  .scrolled .downloadIcon {
-    width: 12px;
-    height: 12px;
-  }
-
-  /* Hide download button when mobile menu is open */
-  .hideOnMobile {
-    opacity: 0;
-    pointer-events: none;
-  }
 }
 
 @media (max-width: 640px) {
-  .navbar.scrolled {
-    width: 98%;
-    top: 0.5rem;
-  }
-
   .container {
-    padding: 0 0.75rem;
+    min-height: 64px;
+    gap: 14px;
+    padding: 0 18px;
   }
 
-  .scrolled .container {
-    padding: 0 0.5rem;
+  .logo {
+    font-size: 1.8rem;
   }
 
-  .logoText {
-    font-size: 1.1rem;
+  .menuToggle {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-left: auto;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
   }
 
-  .scrolled .logoText {
-    font-size: 0.9rem;
+  .menuToggle span {
+    width: 21px;
+    height: 1.5px;
+    background: var(--ink);
+    transition: transform 160ms ease;
+  }
+
+  .menuToggle[aria-expanded="true"] span:first-child {
+    transform: translateY(3.75px) rotate(45deg);
+  }
+
+  .menuToggle[aria-expanded="true"] span:last-child {
+    transform: translateY(-3.75px) rotate(-45deg);
   }
 
   .navLinks {
-    gap: 0.5rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 18px 18px;
+    border-bottom: 1px solid var(--line);
+    background: var(--paper);
   }
 
-  .scrolled .navLinks {
-    gap: 0.25rem;
+  .menuOpen {
+    display: flex;
   }
 
-  .navLink {
-    font-size: 0.8rem;
-    padding: 0.35rem 0.5rem;
+  .navLinks a {
+    display: block;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.95rem;
   }
 
-  .scrolled .navLink {
+  .contactButton {
+    min-height: 38px;
+    padding: 0 11px;
+    gap: 6px;
     font-size: 0.7rem;
-    padding: 0.25rem 0.3rem;
   }
-
-  .downloadButton {
-    padding: 0.45rem 0.6rem;
-    font-size: 0.7rem;
-  }
-
-  .downloadIcon {
-    width: 12px;
-    height: 12px;
-  }
-
-  .scrolled .downloadButton {
-    padding: 0.35rem 0.4rem;
-  }
-
-  .scrolled .downloadIcon {
-    width: 10px;
-    height: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar {
-    padding: 0.5rem 0;
-  }
-
-  .navbar.scrolled {
-    width: 98%;
-    top: 0.25rem;
-    padding: 0.4rem 0;
-  }
-
-  .container {
-    padding: 0 0.5rem;
-  }
-
-  .scrolled .container {
-    padding: 0 0.4rem;
-  }
-
-  .logoText {
-    font-size: 1rem;
-  }
-
-  .scrolled .logoText {
-    font-size: 0.85rem;
-  }
-
-  .navLinks {
-    gap: 0.25rem;
-  }
-
-  .scrolled .navLinks {
-    gap: 0.15rem;
-  }
-
-  .navLink {
-    font-size: 0.75rem;
-    padding: 0.3rem 0.4rem;
-  }
-
-  .scrolled .navLink {
-    font-size: 0.65rem;
-    padding: 0.2rem 0.25rem;
-  }
-
-  .downloadButton {
-    padding: 0.4rem 0.5rem;
-    font-size: 0.65rem;
-    min-width: auto;
-  }
-
-  .downloadIcon {
-    width: 10px;
-    height: 10px;
-  }
-
-  .scrolled .downloadButton {
-    padding: 0.3rem 0.35rem;
-  }
-
-  .scrolled .downloadIcon {
-    width: 8px;
-    height: 8px;
-  }
-}
-
-@media (max-width: 360px) {
-  .container {
-    padding: 0 0.25rem;
-  }
-
-  .scrolled .container {
-    padding: 0 0.25rem;
-  }
-
-  .logoText {
-    font-size: 0.9rem;
-  }
-
-  .scrolled .logoText {
-    font-size: 0.8rem;
-  }
-
-  .navLinks {
-    gap: 0.15rem;
-  }
-
-  .scrolled .navLinks {
-    gap: 0.1rem;
-  }
-
-  .navLink {
-    font-size: 0.7rem;
-    padding: 0.25rem 0.3rem;
-  }
-
-  .scrolled .navLink {
-    font-size: 0.6rem;
-    padding: 0.15rem 0.2rem;
-  }
-
-  .downloadButton {
-    padding: 0.35rem 0.4rem;
-    font-size: 0.6rem;
-  }
-
-  .downloadIcon {
-    width: 8px;
-    height: 8px;
-  }
-
-  .scrolled .downloadButton {
-    padding: 0.25rem 0.3rem;
-  }
-
-  .scrolled .downloadIcon {
-    width: 6px;
-    height: 6px;
-  }
-}
-
-.logoImage {
-  height: 60px;
-  width: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3));
-  transition: transform 0.3s ease;
-}
-
-.logoImage:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.6));
 }

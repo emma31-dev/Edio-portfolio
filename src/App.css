@@ -1,16 +1,4 @@
 .App {
   min-height: 100vh;
-}
-
-/* Add padding for fixed navbar on tablet format */
-@media (max-width: 1024px) {
-  .App {
-    padding-top: 80px; /* Adjust based on navbar height */
-  }
-}
-
-@media (max-width: 768px) {
-  .App {
-    padding-top: 70px; /* Slightly less for mobile */
-  }
+  overflow: clip;
 }

@@ -1,62 +1,50 @@
 .modalOverlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
   padding: 20px;
+  background: rgba(15, 15, 15, 0.78);
 }
 
 .modalContent {
-  background: var(--secondary-black);
-  border-radius: 12px;
-  max-width: 800px;
-  width: 100%;
+  position: relative;
+  width: min(850px, 100%);
   max-height: 90vh;
   overflow-y: auto;
-  position: relative;
-  animation: modalSlideIn 0.3s ease-out;
-  border: 1px solid var(--accent-black);
+  border: 1px solid var(--line);
+  background: var(--paper);
+  animation: modalSlideIn 200ms ease-out;
 }
 
 @keyframes modalSlideIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9) translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .closeButton {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  background: rgba(255, 215, 0, 0.1);
-  border: 1px solid rgba(255, 215, 0, 0.3);
+  z-index: 1;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid rgba(23, 23, 23, 0.18);
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
+  background: var(--paper);
+  color: var(--ink);
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1001;
-  transition: all 0.2s ease;
-  color: var(--primary-gold);
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
 .closeButton:hover {
-  background: rgba(255, 215, 0, 0.2);
-  border-color: var(--primary-gold);
+  border-color: var(--gold);
+  color: var(--gold);
 }
 
 .modalBody {
@@ -66,9 +54,9 @@
 
 .imageContainer {
   width: 100%;
-  height: 300px;
+  height: 280px;
   overflow: hidden;
-  border-radius: 12px 12px 0 0;
+  background: var(--soft-paper);
 }
 
 .imageContainer img {
@@ -78,53 +66,56 @@
 }
 
 .contentContainer {
-  padding: 30px;
+  padding: clamp(24px, 5vw, 44px);
 }
 
 .category {
   display: inline-block;
-  background: rgba(255, 215, 0, 0.1);
-  color: var(--primary-gold);
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--gold);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 15px;
-  border: 1px solid rgba(255, 215, 0, 0.3);
 }
 
 .title {
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--text-white);
-  margin: 0 0 20px 0;
-  line-height: 1.2;
+  margin: 0 0 16px;
+  color: var(--ink);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  line-height: 1.1;
 }
 
 .description {
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--text-grey);
   margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .modalBody {
+    min-height: 420px;
     flex-direction: row;
   }
 
   .imageContainer {
     width: 50%;
-    height: 400px;
-    border-radius: 12px 0 0 12px;
+    height: auto;
   }
 
   .contentContainer {
-    width: 50%;
     display: flex;
+    width: 50%;
     flex-direction: column;
     justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modalContent {
+    animation: none;
   }
 }
