@@ -11,103 +11,103 @@ export const projectsData: Project[] = [
   // Logos
   {
     id: '1',
-    title: 'Luxe Fashion Brand',
+    title: 'Independence Day Celebration',
     imageUrl: '/image1.jpg',
-    category: 'logos',
-    shortDescription: 'Elegant fashion boutique logo',
-    fullDescription: 'Sophisticated logo design for a high-end fashion boutique featuring custom typography, gold accents, and timeless elegance. The design captures the essence of luxury while maintaining versatility across various brand applications.'
+    category: 'flyers',
+    shortDescription: 'Nigerian Independence Day celebration flyer',
+    fullDescription: 'A celebratory flyer welcoming October and marking Nigeria’s 65th Independence Day on October 1, 2025. The design uses the Nigerian flag’s green and white colors, the number 65, and portraits of national leaders to honor the occasion.'
   },
   {
     id: '2',
-    title: 'Tech Startup Identity',
+    title: 'MST Print and Delivery',
     imageUrl: '/image2.jpg',
-    category: 'logos',
-    shortDescription: 'Modern fintech brand identity',
-    fullDescription: 'Complete brand identity package for an innovative fintech startup. Includes primary logo, variations, color palette, and comprehensive brand guidelines that emphasize trust, innovation, and digital-first approach.'
+    category: 'flyers',
+    shortDescription: 'Promotional flyer for MST Print and Delivery services',
+    fullDescription: 'An orange-and-black promotional flyer for MST Print and Delivery, featuring printing equipment and a list of services including CVs, flyers, posters, letters, school assignments, graphic design, and color printing.'
   },
   {
     id: '3',
-    title: 'Corporate Excellence',
+    title: 'Blex Graphix Hub Christmas',
     imageUrl: '/image3.jpg',
-    category: 'logos',
-    shortDescription: 'Professional corporate branding',
-    fullDescription: 'Clean and professional corporate logo design that emphasizes trust, reliability, and innovation. The design features geometric elements and sophisticated typography that works seamlessly across digital and print media.'
+    category: 'flyers',
+    shortDescription: 'Christmas greetings flyer for Blex Graphix Hub',
+    fullDescription: 'A festive Christmas greeting from Blex Graphix Hub, featuring Santa Claus, ornaments, evergreen branches, and a warm seasonal message wishing viewers peace and happiness at home.'
   },
   {
     id: '4',
-    title: 'Artisan Restaurant',
+    title: 'MFO Schools Tech',
     imageUrl: '/image4.jpg',
-    category: 'logos',
-    shortDescription: 'Hand-crafted restaurant logo',
-    fullDescription: 'Warm and inviting restaurant logo featuring custom hand-lettered typography and organic elements. The design reflects the artisanal nature of the cuisine while maintaining readability and brand recognition.'
+    category: 'flyers',
+    shortDescription: 'Technology courses flyer for MFO Schools Tech',
+    fullDescription: 'A purple promotional flyer for MFO Schools Tech showcasing courses in robotics, data analysis, cybersecurity, AI and programming, networking, animation, and computer hardware maintenance. It also features the school’s address in Uyo.'
   },
 
   // Flyers
   {
     id: '5',
-    title: 'Summer Music Festival',
+    title: 'Sensei Birthday Tribute',
     imageUrl: '/image5.jpg',
     category: 'flyers',
-    shortDescription: 'Vibrant festival promotion',
-    fullDescription: 'Eye-catching promotional flyer for a summer music festival featuring bold graphics, dynamic layout, and energetic color scheme. The design captures the excitement of live music while clearly communicating event details and lineup information.'
+    shortDescription: 'Birthday celebration flyer for Sensei',
+    fullDescription: 'A blue birthday tribute celebrating Sensei on November 21, featuring his portrait and describing him as a friend, mentor, brother, and inspiration.'
   },
   {
     id: '6',
-    title: 'Product Launch Campaign',
+    title: 'MST New Year Greeting',
     imageUrl: '/image6.jpg',
     category: 'flyers',
-    shortDescription: 'Modern product showcase',
-    fullDescription: 'Sleek and modern product launch promotional material with clean design elements, strategic use of whitespace, and compelling call-to-action. The layout emphasizes product benefits while maintaining brand consistency.'
+    shortDescription: 'New Year greeting flyer from MST Prints and Delivery',
+    fullDescription: 'An orange New Year greeting from MST Prints and Delivery, welcoming January and thanking customers for their business while wishing them prosperity, blessings, and success.'
   },
   {
     id: '7',
-    title: 'Design Conference',
+    title: 'Carol Night',
     imageUrl: '/image7.jpg',
     category: 'flyers',
-    shortDescription: 'Professional event promotion',
-    fullDescription: 'Professional conference promotional design featuring clean typography, geometric patterns, and sophisticated color palette. The design appeals to creative professionals while clearly communicating speaker lineup and event schedule.'
+    shortDescription: 'Christmas carol night flyer for The Light Choir',
+    fullDescription: 'A festive green-and-white flyer inviting guests to Carol Night hosted by The Light Choir of The Garden of the Light and Faith Mission (Isong Enwongo Ye Idaresit) in Itiam Ikot Ebia. The design highlights the theme “When they saw the star, they rejoiced with exceedingly great joy” (Matthew 2:10) alongside Christmas trees and ornaments, with the event holding at 5:00 PM on 24th December 2025 in the Church Auditorium.'
   },
   {
     id: '8',
-    title: 'Fashion Week Showcase',
+    title: "Esthy's Fast Food",
     imageUrl: '/image8.jpg',
     category: 'flyers',
-    shortDescription: 'Elegant fashion promotion',
-    fullDescription: 'Sophisticated fashion show promotional material with elegant typography, high-fashion photography, and refined color scheme. The design captures the glamour of fashion week while maintaining readability and brand prestige.'
+    shortDescription: 'Fast food restaurant flyer for Esthy’s Fast Food',
+    fullDescription: 'A bold black-and-white restaurant flyer for Esthy’s Fast Food, showcasing close-up food photography of stir-fried noodles, grilled chicken, and rice dishes in angled frames. It includes a French quote, a “Restaurants” section with a slogan placeholder, sample dishes, a “Order now and get your delivery” call to action, and the phone number 0810-842-8142.'
   },
 
   // Banners
   {
     id: '9',
-    title: 'E-commerce Campaign',
+    title: 'MST Prints and Delivery Logo',
     imageUrl: '/image9.jpg',
-    category: 'banners',
-    shortDescription: 'Digital marketing banner',
-    fullDescription: 'High-converting e-commerce banner design optimized for digital platforms. Features compelling product imagery, clear value proposition, and strategic placement of call-to-action elements to maximize click-through rates and conversions.'
+    category: 'logos',
+    shortDescription: 'Gold emblem logo for MST Prints and Delivery',
+    fullDescription: 'A premium gold emblem logo for MST Prints and Delivery set on a deep navy background. The circular badge features a laurel wreath, the letters “MST”, a central monogram with “Prints & Delivery”, and a flowing ribbon carrying the tagline “Quality at its best”.'
   },
   {
     id: '10',
-    title: 'Brand Awareness Drive',
+    title: 'Grace Motivational Design',
     imageUrl: '/image10.jpg',
     category: 'banners',
-    shortDescription: 'Corporate brand banner',
-    fullDescription: 'Impactful brand awareness banner that effectively communicates company values and services. The design uses bold typography, consistent brand colors, and strategic messaging hierarchy to create memorable brand impressions.'
+    shortDescription: 'Personal branding design titled “Grace”',
+    fullDescription: 'An elegant personal branding design by Blex_Graphix hub featuring a smiling woman in a white suit against a soft blue background, with a faded duplicate portrait behind her. The word “GRACE” is set in large gold lettering framed by pink roses, accompanied by a motivational quote from Nonso Nneji about putting heart, mind, and soul into even the smallest acts.'
   },
   {
     id: '11',
-    title: 'Social Media Campaign',
+    title: "D'Awesomes Luxury Hotel",
     imageUrl: '/image11.jpg',
     category: 'banners',
-    shortDescription: 'Social platform graphics',
-    fullDescription: 'Engaging social media banner series designed for maximum engagement across platforms. Features consistent visual language, platform-optimized dimensions, and compelling messaging that encourages user interaction and sharing.'
+    shortDescription: 'Luxury hotel promotional flyer',
+    fullDescription: 'A blue-and-gold promotional flyer for D’Awesomes Luxury Hotel. It lists facilities such as free WiFi, mini bar, meeting room, good ventilation, fitness centre, and swimming pool, alongside photos of the illuminated hotel exterior, poolside, reception, and guest rooms. Contact details include phone numbers 07099223357 and 09022781561, the handle @blex_graphixhub.com, and the address #24 Emco Lane, Uyo, Akwa Ibom State.'
   },
   {
     id: '12',
-    title: 'Event Promotion Banner',
+    title: 'Joshua Clinton Birthday',
     imageUrl: '/image12.jpg',
     category: 'banners',
-    shortDescription: 'Event marketing display',
-    fullDescription: 'Dynamic event promotion banner with attention-grabbing visuals and clear event information hierarchy. The design balances visual impact with practical information delivery, ensuring maximum event awareness and attendance.'
+    shortDescription: 'Birthday tribute flyer for Joshua Clinton',
+    fullDescription: 'A glamorous gold-themed birthday flyer celebrating actor Joshua Clinton. It combines layered monochrome portraits with a full-colour cut-out of him in a beige suit, framed by golden curtains, a gift box, and a personal message wishing him an amazing year ahead.'
   }
 ];
 

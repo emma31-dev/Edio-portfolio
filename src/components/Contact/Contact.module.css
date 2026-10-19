@@ -128,10 +128,6 @@
   opacity: 0.7;
 }
 
-.submitting {
-  opacity: 0.7;
-}
-
 .errorMessage {
   display: block;
   margin-top: 6px;
@@ -165,40 +161,33 @@
 .socialLinks {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 16px;
+  gap: 14px;
 }
 
 .socialLink {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
   padding: 0;
   border: 0;
   background: transparent;
   color: #62615e;
   cursor: pointer;
-  font-size: 0.78rem;
 }
 
-.socialLink:hover,
-.socialLink:hover .socialPlatform {
+.socialLink:hover {
   color: var(--gold);
 }
 
 .socialIcon {
   display: inline-flex;
-  width: 15px;
-  height: 15px;
+  width: 30px;
+  height: 30px;
 }
 
 .socialIcon svg {
   width: 100%;
   height: 100%;
   fill: currentColor;
-}
-
-.socialPlatform {
-  color: inherit;
 }
 
 @media (max-width: 700px) {
