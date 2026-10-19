@@ -1,9 +1,54 @@
 .about {
-  padding: clamp(76px, 10vw, 140px) 0 70px;
+  position: relative;
+  padding: clamp(76px, 10vw, 140px) 0 95px;
   background: var(--soft-paper);
 }
 
+.penTool,
+.shapeTool {
+  position: absolute;
+  z-index: 0;
+  width: 48px;
+  height: 48px;
+  overflow: visible;
+  fill: none;
+  stroke: var(--ink);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+  opacity: 0.72;
+  pointer-events: none;
+}
+
+.penTool {
+  top: 26px;
+  right: clamp(24px, 5vw, 72px);
+}
+
+.penTool circle {
+  fill: var(--gold);
+  stroke: none;
+}
+
+.shapeTool {
+  bottom: 22px;
+  left: clamp(24px, 5vw, 72px);
+  width: 56px;
+  height: 56px;
+}
+
+.shapeTool circle {
+  fill: rgba(189, 154, 75, 0.18);
+  stroke: var(--gold);
+}
+
+.shapeTool rect {
+  stroke: var(--gold);
+}
+
 .container {
+  position: relative;
+  z-index: 1;
   display: grid;
   width: min(1200px, 100%);
   grid-template-columns: 1.1fr 0.9fr;
@@ -90,6 +135,24 @@
 }
 
 @media (max-width: 720px) {
+  .about {
+    padding-bottom: 90px;
+  }
+
+  .penTool {
+    top: 18px;
+    right: 18px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .shapeTool {
+    bottom: 18px;
+    left: 16px;
+    width: 42px;
+    height: 42px;
+  }
+
   .container {
     grid-template-columns: 1fr;
     gap: 30px;
