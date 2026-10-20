@@ -17,7 +17,7 @@ const Portfolio: React.FC = () => {
             <p className={styles.eyebrow}>Selected projects</p>
             <h2 className={styles.title}>A few things I’ve made.</h2>
           </div>
-          <p className={styles.subtitle}>Identity, print, and digital design — made to communicate clearly and leave a lasting impression.</p>
+          <p className={styles.subtitle}>Identity, print, and digital design made to communicate clearly and leave a lasting impression.</p>
         </div>
 
         <div className={styles.projectGrid}>

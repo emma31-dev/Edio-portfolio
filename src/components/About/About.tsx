@@ -22,7 +22,7 @@ const About: React.FC = () => (
       </div>
       <div className={styles.content}>
         <p className={styles.description}>
-          I’m <span className={styles.goldText}>Ediodiong Emmanuel</span>, a graphic designer who believes the best visuals do more than look good — they make ideas clear, memorable, and easy to connect with.
+          I’m <span className={styles.goldText}>Ediodiong Emmanuel</span>, a graphic designer who believes the best visuals do more than look good. I make ideas clear, memorable, and easy to connect with.
         </p>
         <p className={styles.description}>
           From logo design and brand identity to flyers, social media, and promotional materials, I build thoughtful visual systems with strong hierarchy, purposeful typography, and a clear point of view.

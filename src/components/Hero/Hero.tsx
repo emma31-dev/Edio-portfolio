@@ -4,7 +4,7 @@ import styles from './Hero.module.css';
 const Hero: React.FC = () => (
   <section id="hero" className={styles.hero}>
     <div className={styles.content}>
-      <p className={styles.introduction}><span aria-hidden="true">✳</span> Hello, I’m Ediodiong — a graphic designer</p>
+      <p className={styles.introduction}><span aria-hidden="true">✳</span> Hello, I’m Ediodiong</p>
       <h1 className={styles.title}>
         <span className={styles.solidTitle}>Graphic designer</span>
         <span className={styles.outlineTitle}>&amp; Visual storyteller</span>
